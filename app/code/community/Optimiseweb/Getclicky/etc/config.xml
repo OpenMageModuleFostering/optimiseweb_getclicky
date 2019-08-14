@@ -3,7 +3,7 @@
 
   <modules>
     <Optimiseweb_Getclicky>
-      <version>0.1.3</version>
+      <version>0.1.5</version>
     </Optimiseweb_Getclicky>
   </modules>
 
@@ -26,12 +26,7 @@
           <getclicky translate="title" module="getclicky">
             <title>GetClicky Integration</title>
             <sort_order>5</sort_order>
-            <children>
-              <settings translate="title" module="getclicky">
-                <title>Settings</title>
-                <action>adminhtml/system_config/edit/section/optimisewebgetclickyconfig</action>
-              </settings>
-            </children>
+            <action>adminhtml/system_config/edit/section/optimisewebgetclickyconfig</action>
           </getclicky>
         </children>
       </optimiseweball>
