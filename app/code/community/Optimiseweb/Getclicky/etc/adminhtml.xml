@@ -7,7 +7,9 @@
       </all>
       <admin>
         <children>
-          <optimiseweball>
+          <optimiseweball translate="title" module="getclicky">
+            <title>Optimise Web - Menu Group</title>
+            <sort_order>10</sort_order>
             <children>
               <getclicky translate="title" module="getclicky">
                 <title>Optimise Web - GetClicky Integration</title>
@@ -25,6 +27,9 @@
             <children>
               <config>
                 <children>
+                  <optimisewebconfig translate="title" module="getclicky">
+                    <title>Optimise Web - System Configuration Group</title>
+                  </optimisewebconfig>
                   <optimisewebgetclickyconfig translate="title" module="getclicky">
                     <title>Optimise Web - GetClicky Integration</title>
                   </optimisewebgetclickyconfig>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>Optimiseweb_Getclicky</name>
-    <version>0.1.2</version>
+    <version>0.1.3</version>
     <stability>stable</stability>
     <license uri="http://opensource.org/licenses/osl-3.0.php">Open Software License (OSL)</license>
     <channel>community</channel>
@@ -10,11 +10,11 @@
     <description>GetClicky is a real time web analytics service. This extension is a GetClicky integration for the Magento eCommerce platform. Optimise Web's GetClicky integration extension allows store owners to enable GetClicky tracking for their websites. This extension can send checkout successes and revenues as dynamic goals to GetClicky.&#xD;
 &#xD;
 This extension comes with a complete configuration screen where all options can be configured.</description>
-    <notes>This is a stable release. This module has been used for our clients who have GetClicky tracking. We have tested it fully and now releasing it for the community.</notes>
+    <notes>Minor code optimisations</notes>
     <authors><author><name>Kathir Vel</name><user>OptimiseWeb</user><email>info@optimiseweb.co.uk</email></author></authors>
-    <date>2012-10-10</date>
-    <time>14:32:57</time>
-    <contents><target name="magecommunity"><dir name="Optimiseweb"><dir name="All"><dir name="Helper"><file name="Data.php" hash="f313a1ea2cc6d5d8fb74987fe94be72f"/></dir><dir name="etc"><file name="adminhtml.xml" hash="7af37ec5af3c743fe5c969c6d72ef851"/><file name="config.xml" hash="a51e5f5b17e1d2a135620277f8a0059b"/><file name="system.xml" hash="7691682d549c83966619516d714493bb"/></dir></dir><dir name="Getclicky"><dir name="Helper"><file name="Data.php" hash="f9d9d294ad02c05b31d259bc8151ad26"/></dir><dir name="Model"><dir name="System"><dir name="Config"><dir name="Source"><file name="Trackertypes.php" hash="f7d8f1aba638867d8525f6f5a6f7f21a"/></dir></dir></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="9150d85a1e44ae0f42e200d0302b22b0"/><file name="config.xml" hash="365cc2352da7e6dd836628a479b14ba1"/><file name="system.xml" hash="25cfb12ec7f977e67685d5293d9bd1e5"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Optimiseweb_All.xml" hash="f553c1dc235d920050cfe13d796c77aa"/><file name="Optimiseweb_Getclicky.xml" hash="72a085b4f02582a11b2490643b34439a"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="optimiseweb_getclicky.xml" hash="1e8fd6b42b3e6ea08928fde2e749d1f8"/></dir><dir name="template"><dir name="optimiseweb"><dir name="getclicky"><dir name="goals"><file name="checkout-onepage-success.phtml" hash="2775e82d101de25109d24e6f753161b2"/></dir><file name="tracker.phtml" hash="60416d94ac711841873fdae739076f1c"/></dir></dir></dir></dir></dir></dir></target></contents>
+    <date>2012-10-13</date>
+    <time>17:43:51</time>
+    <contents><target name="magecommunity"><dir name="Optimiseweb"><dir name="Getclicky"><dir name="Helper"><file name="Data.php" hash="f9d9d294ad02c05b31d259bc8151ad26"/></dir><dir name="Model"><dir name="System"><dir name="Config"><dir name="Source"><file name="Trackertypes.php" hash="f7d8f1aba638867d8525f6f5a6f7f21a"/></dir></dir></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="ed7e4b02c7a329826e61e2ad77f064d8"/><file name="config.xml" hash="26d219efd21d801adcedb9bb57f70ede"/><file name="system.xml" hash="61b7fba44d18ef41eb04d4bdeb21829f"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Optimiseweb_Getclicky.xml" hash="72a085b4f02582a11b2490643b34439a"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="optimiseweb_getclicky.xml" hash="1e8fd6b42b3e6ea08928fde2e749d1f8"/></dir><dir name="template"><dir name="optimiseweb"><dir name="getclicky"><dir name="goals"><file name="checkout-onepage-success.phtml" hash="2775e82d101de25109d24e6f753161b2"/></dir><file name="tracker.phtml" hash="60416d94ac711841873fdae739076f1c"/></dir></dir></dir></dir></dir></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
 </package>
