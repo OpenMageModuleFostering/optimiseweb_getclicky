@@ -8,34 +8,25 @@
  */
 $getClickyGoalEnabled = Mage::getStoreConfig('optimisewebgetclickyconfig/goal_checkout_onepage_entry/enabled');
 $getClickyGoalType = Mage::getStoreConfig('optimisewebgetclickyconfig/goal_checkout_onepage_entry/goal_type');
-if (Mage::getStoreConfig('optimisewebgetclickyconfig/goal_checkout_onepage_entry/goal_name'))
-{
-  $getClickyGoalName = Mage::getStoreConfig('optimisewebgetclickyconfig/goal_checkout_onepage_entry/goal_name');
+if (Mage::getStoreConfig('optimisewebgetclickyconfig/goal_checkout_onepage_entry/goal_name')) {
+    $getClickyGoalName = Mage::getStoreConfig('optimisewebgetclickyconfig/goal_checkout_onepage_entry/goal_name');
+} else {
+    $getClickyGoalName = 'Onepage Checkout Entry';
 }
-else
-{
-  $getClickyGoalName = 'Onepage Checkout Entry';
-}
-if (Mage::getStoreConfig('optimisewebgetclickyconfig/goal_checkout_onepage_entry/goal_id'))
-{
-  $getClickyGoalId = Mage::getStoreConfig('optimisewebgetclickyconfig/goal_checkout_onepage_entry/goal_id');
-}
-else
-{
-  $getClickyGoalType = 'dynamic';
+if (Mage::getStoreConfig('optimisewebgetclickyconfig/goal_checkout_onepage_entry/goal_id')) {
+    $getClickyGoalId = Mage::getStoreConfig('optimisewebgetclickyconfig/goal_checkout_onepage_entry/goal_id');
+} else {
+    $getClickyGoalType = 'dynamic';
 }
 
 $js = "";
 $js .= "<script type=\"text/javascript\">\n";
 $js .= "var clicky_custom = clicky_custom || {};\n";
 $js .= "clicky_custom.goal = {\n";
-if ($getClickyGoalType == 'dynamic')
-{
-  $js .= "name: \"" . $getClickyGoalName . "\"\n";
-}
-else
-{
-  $js .= "id: \"" . $getClickyGoalId . "\"\n";
+if ($getClickyGoalType == 'dynamic') {
+    $js .= "name: \"" . $getClickyGoalName . "\"\n";
+} else {
+    $js .= "id: \"" . $getClickyGoalId . "\"\n";
 }
 $js .= "};\n";
 $js .= "</script>\n";
