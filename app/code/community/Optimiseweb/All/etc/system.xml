@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+  <tabs>
+    <optimisewebconfig translate="label comment">
+      <label>Optimise Web</label>
+      <sort_order>0</sort_order>
+    </optimisewebconfig>
+  </tabs>
+</config>

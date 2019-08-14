@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Optimiseweb_Getclicky",
+    "type": "magento-module",
+    "license": "Open-Software-License-(OSL)",
+    "homepage": "",
+    "description": "GetClicky is a real time web analytics service. This extension is a GetClicky integration for the Magento eCommerce platform. Optimise Web's GetClicky integration extension allows store owners to enable GetClicky tracking for their websites. This extension can send checkout successes and revenues as dynamic goals to GetClicky.",
+    "authors": [
+    {
+        "name": "Kathir Vel",
+        "email": "sid@optimiseweb.co.uk"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

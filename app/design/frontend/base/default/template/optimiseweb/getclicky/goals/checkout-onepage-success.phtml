@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @package     Optimiseweb_Getclicky
+ * @author      Kathir Vel (sid@optimiseweb.co.uk)
+ * @copyright   Copyright (c) 2012 Optimiseweb Ltd
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+$getClickyGoalEnabled = Mage::getStoreConfig('optimisewebgetclickyconfig/goal_checkout_onepage_success/enabled');
+$getClickyGoalName = Mage::getStoreConfig('optimisewebgetclickyconfig/goal_checkout_onepage_success/goal_name');
+$getClickyGoalRevenue = Mage::getStoreConfig('optimisewebgetclickyconfig/goal_checkout_onepage_success/goal_revenue');
+
+/* Get Order Grand Total */
+if ($getClickyGoalRevenue)
+{
+  $getClickyOrder = Mage::getModel('sales/order')->load(Mage::getSingleton('checkout/session')->getLastOrderId());
+  $getClickyGrandTotal = number_format($getClickyOrder->getGrandTotal(), 2);
+}
+
+/* Build the Code */
+$js = '<script>';
+$js .= 'var clicky_custom = {};';
+$js .= 'clicky_custom.goal = {';
+if ($getClickyGrandTotal)
+{
+  $js .= 'name: \'' . $getClickyGoalName . '\',';
+  $js .= 'revenue: \'' . $getClickyGrandTotal . '\'';
+}
+else
+{
+  $js .= 'name: \'' . $getClickyGoalName . '\'';
+}
+$js .= '};';
+$js .= '</script>';
+echo $js;
+
+/* $subTotal = $order->getSubtotal(); */
+/* $order->getId(); */
+/* $order->getIncrementId(); */

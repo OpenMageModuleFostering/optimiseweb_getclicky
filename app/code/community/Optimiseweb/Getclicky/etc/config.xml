@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+
+  <modules>
+    <Optimiseweb_Getclicky>
+      <version>0.1.1</version>
+    </Optimiseweb_Getclicky>
+  </modules>
+
+  <frontend>
+
+    <layout>
+      <updates>
+        <getclicky>
+          <file>optimiseweb_getclicky.xml</file>
+        </getclicky>
+      </updates>
+    </layout>
+
+  </frontend>
+
+  <adminhtml>
+
+    <menu>
+      <optimiseweball>
+        <children>
+          <getclicky module="getclicky">
+            <title>GetClicky Integration</title>
+            <sort_order>5</sort_order>
+            <children>
+              <settings>
+                <title>Settings</title>
+                <action>adminhtml/system_config/edit/section/optimisewebgetclickyconfig</action>
+              </settings>
+            </children>
+          </getclicky>
+        </children>
+      </optimiseweball>
+    </menu>
+
+  </adminhtml>
+
+  <global>
+
+    <blocks>
+      <getclicky>
+        <class>Optimiseweb_Getclicky_Block</class>
+      </getclicky>
+    </blocks>
+
+    <helpers>
+      <getclicky>
+        <class>Optimiseweb_Getclicky_Helper</class>
+      </getclicky>
+    </helpers>
+
+    <models>
+      <getclicky>
+        <class>Optimiseweb_Getclicky_Model</class>
+      </getclicky>
+    </models>
+
+  </global>
+
+  <default>
+
+    <optimisewebgetclickyconfig>
+      <getclickygeneral>
+        <enabled>0</enabled>
+        <tracker_type>1</tracker_type>
+        <affiliate_display>1</affiliate_display>
+        <affiliate_link>http://getclicky.com/240502</affiliate_link>
+        <affiliate_badge>//static.getclicky.com/media/links/badge.gif</affiliate_badge>
+        <affiliate_title>GetClicky Web Analytics</affiliate_title>
+      </getclickygeneral>
+
+      <goal_checkout_onepage_success>
+        <enabled>0</enabled>
+        <goal_name>Checkout Success</goal_name>
+        <goal_revenue>0</goal_revenue>
+      </goal_checkout_onepage_success>
+    </optimisewebgetclickyconfig>
+
+  </default>
+
+</config>
