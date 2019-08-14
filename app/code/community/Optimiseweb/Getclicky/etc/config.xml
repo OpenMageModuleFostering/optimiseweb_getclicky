@@ -11,7 +11,7 @@
 
   <modules>
     <Optimiseweb_Getclicky>
-      <version>0.1.6</version>
+      <version>0.1.7</version>
     </Optimiseweb_Getclicky>
   </modules>
 
@@ -73,12 +73,22 @@
         <affiliate_badge>//static.getclicky.com/media/links/badge.gif</affiliate_badge>
         <affiliate_title>GetClicky Web Analytics</affiliate_title>
       </getclickygeneral>
-
       <goal_checkout_onepage_success>
         <enabled>0</enabled>
-        <goal_name>Checkout Success</goal_name>
-        <goal_revenue>0</goal_revenue>
+        <goal_type>dynamic</goal_type>
+        <goal_name>Onepage Checkout Success</goal_name>
+        <goal_revenue>1</goal_revenue>
       </goal_checkout_onepage_success>
+      <goal_checkout_onepage_entry>
+        <enabled>0</enabled>
+        <goal_type>dynamic</goal_type>
+        <goal_name>Onepage Checkout Entry</goal_name>
+      </goal_checkout_onepage_entry>
+      <goal_cart_page>
+        <enabled>0</enabled>
+        <goal_type>dynamic</goal_type>
+        <goal_name>Cart Page</goal_name>
+      </goal_cart_page>
     </optimisewebgetclickyconfig>
   </default>
 

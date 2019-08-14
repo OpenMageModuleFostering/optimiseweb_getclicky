@@ -7,7 +7,24 @@
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 $getClickyGoalEnabled = Mage::getStoreConfig('optimisewebgetclickyconfig/goal_checkout_onepage_success/enabled');
-$getClickyGoalId = Mage::getStoreConfig('optimisewebgetclickyconfig/goal_checkout_onepage_success/goal_id');
+$getClickyGoalType = Mage::getStoreConfig('optimisewebgetclickyconfig/goal_checkout_onepage_success/goal_type');
+if (Mage::getStoreConfig('optimisewebgetclickyconfig/goal_checkout_onepage_success/goal_name'))
+{
+  $getClickyGoalName = Mage::getStoreConfig('optimisewebgetclickyconfig/goal_checkout_onepage_success/goal_name');
+}
+else
+{
+  $getClickyGoalName = 'Onepage Checkout Success';
+}
+if (Mage::getStoreConfig('optimisewebgetclickyconfig/goal_checkout_onepage_success/goal_id'))
+{
+  $getClickyGoalId = Mage::getStoreConfig('optimisewebgetclickyconfig/goal_checkout_onepage_success/goal_id');
+}
+else
+{
+  $getClickyGoalType = 'dynamic';
+}
+
 $getClickyGoalRevenue = Mage::getStoreConfig('optimisewebgetclickyconfig/goal_checkout_onepage_success/goal_revenue');
 
 $getClickyGrandTotal = FALSE;
@@ -24,15 +41,20 @@ $js = "";
 $js .= "<script type=\"text/javascript\">\n";
 $js .= "var clicky_custom = clicky_custom || {};\n";
 $js .= "clicky_custom.goal = {\n";
-if ($getClickyGoalRevenue AND $getClickyGrandTotal)
+if ($getClickyGoalType == 'dynamic')
 {
-  $js .= "id: \"" . $getClickyGoalId . "\",\n";
-  $js .= "revenue: \"" . $getClickyGrandTotal . "\"\n";
+  $js .= "name: \"" . $getClickyGoalName . "\"";
 }
 else
 {
-  $js .= "id: \"" . $getClickyGoalId . "\"\n";
+  $js .= "id: \"" . $getClickyGoalId . "\"";
 }
+if ($getClickyGoalRevenue AND $getClickyGrandTotal)
+{
+  $js .= ",\n";
+  $js .= "revenue: \"" . $getClickyGrandTotal . "\"";
+}
+$js .= "\n";
 $js .= "};\n";
 $js .= "</script>\n";
 

@@ -31,6 +31,17 @@
     </reference>
   </checkout_onepage_success>
 
+  <!-- Onepage Checkout Entry Page -->
+  <checkout_onepage_index>
+    <reference name="before_body_end">
+      <block type="core/template" name="Optimiseweb.Getclicky.Goals.Checkout.Onepage.Entry" before="Optimiseweb.Getclicky.Tracker">
+        <action method="setTemplate" ifconfig="optimisewebgetclickyconfig/goal_checkout_onepage_entry/enabled">
+          <template>optimiseweb/getclicky/goals/checkout-onepage-entry.phtml</template>
+        </action>
+      </block>
+    </reference>
+  </checkout_onepage_index>
+
   <!-- Cart Page -->
   <checkout_cart_index>
     <reference name="before_body_end">

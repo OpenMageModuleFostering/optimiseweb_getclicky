@@ -145,21 +145,39 @@
               <show_in_website>1</show_in_website>
               <show_in_store>1</show_in_store>
             </enabled>
+            <goal_type translate="label comment">
+              <label>Goal Type</label>
+              <frontend_type>select</frontend_type>
+              <source_model>getclicky/system_config_source_goaltypes</source_model>
+              <sort_order>2</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </goal_type>
+            <goal_name translate="label comment">
+              <label>Goal Name</label>
+              <comment>If using the dynamic goal type, what is your goal name? Default's to 'Onepage Checkout Success' if left blank.</comment>
+              <frontend_type>text</frontend_type>
+              <sort_order>3</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </goal_name>
             <goal_id translate="label comment">
               <label>Goal ID</label>
-              <comment>The goal management page in GetClicky lists the ID for each goal next to the goal's name.</comment>
+              <comment>The goal management page in GetClicky lists the ID for each preconfigured goal next to the goal's name.</comment>
               <frontend_type>text</frontend_type>
-              <validate>required-entry</validate>
-              <sort_order>2</sort_order>
+              <sort_order>4</sort_order>
               <show_in_default>1</show_in_default>
               <show_in_website>1</show_in_website>
               <show_in_store>1</show_in_store>
             </goal_id>
             <goal_revenue translate="label comment">
-              <label>Add order 'Grand Toal' as goal revenue?</label>
+              <label>Add Goal Revenue?</label>
+              <comment>Add order 'Grand Toal' as goal revenue?</comment>
               <frontend_type>select</frontend_type>
               <source_model>adminhtml/system_config_source_yesno</source_model>
-              <sort_order>3</sort_order>
+              <sort_order>5</sort_order>
               <show_in_default>1</show_in_default>
               <show_in_website>1</show_in_website>
               <show_in_store>1</show_in_store>
@@ -167,9 +185,9 @@
           </fields>
         </goal_checkout_onepage_success>
 
-        <goal_cart_page translate="label comment">
-          <label>Goal - Cart Page</label>
-          <comment>Tracks every landing on the /checkout/cart/ page.</comment>
+        <goal_checkout_onepage_entry translate="label comment">
+          <label>Goal - Onepage Checkout Entry</label>
+          <comment>Tracks every landing on the /checkout/onepage/ page.</comment>
           <frontend_type>text</frontend_type>
           <sort_order>4</sort_order>
           <show_in_default>1</show_in_default>
@@ -185,12 +203,77 @@
               <show_in_website>1</show_in_website>
               <show_in_store>1</show_in_store>
             </enabled>
+            <goal_type translate="label comment">
+              <label>Goal Type</label>
+              <frontend_type>select</frontend_type>
+              <source_model>getclicky/system_config_source_goaltypes</source_model>
+              <sort_order>2</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </goal_type>
+            <goal_name translate="label comment">
+              <label>Goal Name</label>
+              <comment>If using the dynamic goal type, what is your goal name? Default's to 'Onepage Checkout Entry' if left blank.</comment>
+              <frontend_type>text</frontend_type>
+              <sort_order>3</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </goal_name>
             <goal_id translate="label comment">
               <label>Goal ID</label>
               <comment>The goal management page in GetClicky lists the ID for each goal next to the goal's name.</comment>
               <frontend_type>text</frontend_type>
-              <validate>required-entry</validate>
+              <sort_order>4</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </goal_id>
+          </fields>
+        </goal_checkout_onepage_entry>
+
+        <goal_cart_page translate="label comment">
+          <label>Goal - Cart Page</label>
+          <comment>Tracks every landing on the /checkout/cart/ page.</comment>
+          <frontend_type>text</frontend_type>
+          <sort_order>5</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>1</show_in_store>
+          <fields>
+            <enabled translate="label comment">
+              <label>Enable?</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>1</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </enabled>
+            <goal_type translate="label comment">
+              <label>Goal Type</label>
+              <frontend_type>select</frontend_type>
+              <source_model>getclicky/system_config_source_goaltypes</source_model>
               <sort_order>2</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </goal_type>
+            <goal_name translate="label comment">
+              <label>Goal Name</label>
+              <comment>If using the dynamic goal type, what is your goal name? Default's to 'Cart Page' if left blank.</comment>
+              <frontend_type>text</frontend_type>
+              <sort_order>3</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </goal_name>
+            <goal_id translate="label comment">
+              <label>Goal ID</label>
+              <comment>The goal management page in GetClicky lists the ID for each goal next to the goal's name.</comment>
+              <frontend_type>text</frontend_type>
+              <sort_order>4</sort_order>
               <show_in_default>1</show_in_default>
               <show_in_website>1</show_in_website>
               <show_in_store>1</show_in_store>
