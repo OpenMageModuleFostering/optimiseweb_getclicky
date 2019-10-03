@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Optimiseweb_Getclicky",
+    "name": "OpenMageModuleFostering\/Optimiseweb_Getclicky",
     "type": "magento-module",
     "license": "Open-Software-License-(OSL)",
     "homepage": "",
     "description": "Clicky is a real time web analytics service. This extension is a Clicky integration for the Magento eCommerce platform. Optimise Web's Clicky integration extension allows store owners to enable Clicky tracking for their websites. This extension can send checkout successes and revenues as dynamic goals to Clicky.",
     "authors": [
-    {
-        "name": "Kathir Vel",
-        "email": "info@optimiseweb.co.uk"
-    }
-],
+        {
+            "name": "Kathir Vel",
+            "email": "info@optimiseweb.co.uk"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
