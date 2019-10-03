@@ -1,3 +1,5 @@
+
+
 ## Original Package Description
 
 Clicky is a real time web analytics service. This extension is a Clicky integration for the Magento eCommerce platform. Optimise Web's Clicky integration extension allows store owners to enable Clicky tracking for their websites. This extension can send checkout successes and revenues as dynamic goals to Clicky.
